@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TournamentBracket.Models
 {
-    class Tournament
+    public class Tournament
     {
         /// <summary>
         /// The name of the current tounament
