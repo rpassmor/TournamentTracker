@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using TournamentBracket.Models;
+using TrackerLibrary.Models;
 
-namespace TournamentBracket
+namespace TrackerLibrary.Connections
 {
     public class SqlConnector : IDataConnection
     {

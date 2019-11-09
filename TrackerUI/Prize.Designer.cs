@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreatePrize));
             this.lblCreatePrize = new System.Windows.Forms.Label();
-            this.txtFirstNameOne = new System.Windows.Forms.TextBox();
+            this.txtPlaceNumber = new System.Windows.Forms.TextBox();
             this.lblPlaceNumber = new System.Windows.Forms.Label();
             this.txtPrizeAmount = new System.Windows.Forms.TextBox();
             this.lblPlaceName = new System.Windows.Forms.Label();
@@ -54,12 +54,12 @@
             this.lblCreatePrize.TabIndex = 12;
             this.lblCreatePrize.Text = "Create Prize";
             // 
-            // txtFirstNameOne
+            // txtPlaceNumber
             // 
-            this.txtFirstNameOne.Location = new System.Drawing.Point(189, 62);
-            this.txtFirstNameOne.Name = "txtFirstNameOne";
-            this.txtFirstNameOne.Size = new System.Drawing.Size(225, 35);
-            this.txtFirstNameOne.TabIndex = 14;
+            this.txtPlaceNumber.Location = new System.Drawing.Point(189, 62);
+            this.txtPlaceNumber.Name = "txtPlaceNumber";
+            this.txtPlaceNumber.Size = new System.Drawing.Size(225, 35);
+            this.txtPlaceNumber.TabIndex = 14;
             // 
             // lblPlaceNumber
             // 
@@ -78,6 +78,7 @@
             this.txtPrizeAmount.Name = "txtPrizeAmount";
             this.txtPrizeAmount.Size = new System.Drawing.Size(225, 35);
             this.txtPrizeAmount.TabIndex = 16;
+            this.txtPrizeAmount.Text = "0";
             // 
             // lblPlaceName
             // 
@@ -114,6 +115,7 @@
             this.txtPrizePercentage.Name = "txtPrizePercentage";
             this.txtPrizePercentage.Size = new System.Drawing.Size(225, 35);
             this.txtPrizePercentage.TabIndex = 20;
+            this.txtPrizePercentage.Text = "0";
             // 
             // lblPrizePercentage
             // 
@@ -151,6 +153,7 @@
             this.btnCreatePrize.TabIndex = 27;
             this.btnCreatePrize.Text = "Create Prize";
             this.btnCreatePrize.UseVisualStyleBackColor = true;
+            this.btnCreatePrize.Click += new System.EventHandler(this.btnCreatePrize_Click);
             // 
             // frmCreatePrize
             // 
@@ -166,7 +169,7 @@
             this.Controls.Add(this.lblPrizeAmount);
             this.Controls.Add(this.txtPrizeAmount);
             this.Controls.Add(this.lblPlaceName);
-            this.Controls.Add(this.txtFirstNameOne);
+            this.Controls.Add(this.txtPlaceNumber);
             this.Controls.Add(this.lblPlaceNumber);
             this.Controls.Add(this.lblCreatePrize);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -183,7 +186,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblCreatePrize;
-        private System.Windows.Forms.TextBox txtFirstNameOne;
+        private System.Windows.Forms.TextBox txtPlaceNumber;
         private System.Windows.Forms.Label lblPlaceNumber;
         private System.Windows.Forms.TextBox txtPrizeAmount;
         private System.Windows.Forms.Label lblPlaceName;
