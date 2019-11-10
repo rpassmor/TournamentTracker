@@ -59,7 +59,7 @@
             this.txtPlaceNumber.Location = new System.Drawing.Point(189, 62);
             this.txtPlaceNumber.Name = "txtPlaceNumber";
             this.txtPlaceNumber.Size = new System.Drawing.Size(225, 35);
-            this.txtPlaceNumber.TabIndex = 14;
+            this.txtPlaceNumber.TabIndex = 1;
             // 
             // lblPlaceNumber
             // 
@@ -77,7 +77,7 @@
             this.txtPrizeAmount.Location = new System.Drawing.Point(189, 144);
             this.txtPrizeAmount.Name = "txtPrizeAmount";
             this.txtPrizeAmount.Size = new System.Drawing.Size(225, 35);
-            this.txtPrizeAmount.TabIndex = 16;
+            this.txtPrizeAmount.TabIndex = 3;
             this.txtPrizeAmount.Text = "0";
             // 
             // lblPlaceName
@@ -96,7 +96,7 @@
             this.txtPlaceName.Location = new System.Drawing.Point(189, 103);
             this.txtPlaceName.Name = "txtPlaceName";
             this.txtPlaceName.Size = new System.Drawing.Size(225, 35);
-            this.txtPlaceName.TabIndex = 18;
+            this.txtPlaceName.TabIndex = 2;
             // 
             // lblPrizeAmount
             // 
@@ -114,7 +114,7 @@
             this.txtPrizePercentage.Location = new System.Drawing.Point(189, 245);
             this.txtPrizePercentage.Name = "txtPrizePercentage";
             this.txtPrizePercentage.Size = new System.Drawing.Size(225, 35);
-            this.txtPrizePercentage.TabIndex = 20;
+            this.txtPrizePercentage.TabIndex = 4;
             this.txtPrizePercentage.Text = "0";
             // 
             // lblPrizePercentage
@@ -150,7 +150,7 @@
             this.btnCreatePrize.Location = new System.Drawing.Point(128, 329);
             this.btnCreatePrize.Name = "btnCreatePrize";
             this.btnCreatePrize.Size = new System.Drawing.Size(176, 44);
-            this.btnCreatePrize.TabIndex = 27;
+            this.btnCreatePrize.TabIndex = 5;
             this.btnCreatePrize.Text = "Create Prize";
             this.btnCreatePrize.UseVisualStyleBackColor = true;
             this.btnCreatePrize.Click += new System.EventHandler(this.btnCreatePrize_Click);
