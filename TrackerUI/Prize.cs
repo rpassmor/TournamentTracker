@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrackerLibrary;
 using TrackerLibrary.Models;
+using System.Configuration;
 
 namespace TrackerUI
 {
@@ -19,7 +20,7 @@ namespace TrackerUI
             InitializeComponent();
         }
 
-        private void btnCreatePrize_Click(object sender, EventArgs e)
+        private void BtnCreatePrize_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
             {

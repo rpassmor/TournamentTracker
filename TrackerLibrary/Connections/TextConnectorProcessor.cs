@@ -5,6 +5,7 @@ using System.Text;
 using System.IO;
 using System.Linq;
 using TrackerLibrary.Models;
+using System.Windows.Forms;
 
 namespace TrackerLibrary.Connections.TextHelper
 {
@@ -13,7 +14,7 @@ namespace TrackerLibrary.Connections.TextHelper
         // return the full file path of the fileName
         public static string FullFilePath(this string fileName) 
         {
-            return $@"{ConfigurationManager.AppSettings["filePath"]}\{fileName}";
+            return $@"{ConfigurationManager.AppSettings["filePath"]}\{fileName}";  
         }
 
         // Load the text file
