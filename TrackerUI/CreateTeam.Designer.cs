@@ -36,15 +36,15 @@
             this.cboSelectTeam = new System.Windows.Forms.ComboBox();
             this.lblSelectTeam = new System.Windows.Forms.Label();
             this.grpAddNewMember = new System.Windows.Forms.GroupBox();
-            this.txtFirstNameOne = new System.Windows.Forms.TextBox();
-            this.lblFirstNameOne = new System.Windows.Forms.Label();
-            this.txtLastNameOne = new System.Windows.Forms.TextBox();
-            this.lblLastNameOne = new System.Windows.Forms.Label();
+            this.btnCreateMember = new System.Windows.Forms.Button();
             this.txtCellphone = new System.Windows.Forms.TextBox();
             this.lblCellphone = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.btnCreateMember = new System.Windows.Forms.Button();
+            this.txtLastNameOne = new System.Windows.Forms.TextBox();
+            this.lblLastNameOne = new System.Windows.Forms.Label();
+            this.txtFirstNameOne = new System.Windows.Forms.TextBox();
+            this.lblFirstNameOne = new System.Windows.Forms.Label();
             this.lstTeamMembers = new System.Windows.Forms.ListBox();
             this.btnDeleteTeam = new System.Windows.Forms.Button();
             this.btnCreateTeam = new System.Windows.Forms.Button();
@@ -135,41 +135,21 @@
             this.grpAddNewMember.TabStop = false;
             this.grpAddNewMember.Text = "Add New Member";
             // 
-            // txtFirstNameOne
+            // btnCreateMember
             // 
-            this.txtFirstNameOne.Location = new System.Drawing.Point(124, 44);
-            this.txtFirstNameOne.Name = "txtFirstNameOne";
-            this.txtFirstNameOne.Size = new System.Drawing.Size(225, 35);
-            this.txtFirstNameOne.TabIndex = 10;
-            // 
-            // lblFirstNameOne
-            // 
-            this.lblFirstNameOne.AutoSize = true;
-            this.lblFirstNameOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblFirstNameOne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.lblFirstNameOne.Location = new System.Drawing.Point(6, 49);
-            this.lblFirstNameOne.Name = "lblFirstNameOne";
-            this.lblFirstNameOne.Size = new System.Drawing.Size(118, 30);
-            this.lblFirstNameOne.TabIndex = 9;
-            this.lblFirstNameOne.Text = "First Name:";
-            // 
-            // txtLastNameOne
-            // 
-            this.txtLastNameOne.Location = new System.Drawing.Point(124, 85);
-            this.txtLastNameOne.Name = "txtLastNameOne";
-            this.txtLastNameOne.Size = new System.Drawing.Size(225, 35);
-            this.txtLastNameOne.TabIndex = 12;
-            // 
-            // lblLastNameOne
-            // 
-            this.lblLastNameOne.AutoSize = true;
-            this.lblLastNameOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblLastNameOne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.lblLastNameOne.Location = new System.Drawing.Point(6, 90);
-            this.lblLastNameOne.Name = "lblLastNameOne";
-            this.lblLastNameOne.Size = new System.Drawing.Size(117, 30);
-            this.lblLastNameOne.TabIndex = 11;
-            this.lblLastNameOne.Text = "Last Name:";
+            this.btnCreateMember.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnCreateMember.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnCreateMember.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnCreateMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateMember.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.btnCreateMember.Location = new System.Drawing.Point(94, 205);
+            this.btnCreateMember.Name = "btnCreateMember";
+            this.btnCreateMember.Size = new System.Drawing.Size(176, 44);
+            this.btnCreateMember.TabIndex = 25;
+            this.btnCreateMember.Text = "Create Member";
+            this.btnCreateMember.UseVisualStyleBackColor = true;
+            this.btnCreateMember.Click += new System.EventHandler(this.btnCreateMember_Click);
             // 
             // txtCellphone
             // 
@@ -207,27 +187,48 @@
             this.lblEmail.TabIndex = 13;
             this.lblEmail.Text = "Email:";
             // 
-            // btnCreateMember
+            // txtLastNameOne
             // 
-            this.btnCreateMember.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnCreateMember.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.btnCreateMember.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnCreateMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreateMember.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.btnCreateMember.Location = new System.Drawing.Point(94, 205);
-            this.btnCreateMember.Name = "btnCreateMember";
-            this.btnCreateMember.Size = new System.Drawing.Size(176, 44);
-            this.btnCreateMember.TabIndex = 25;
-            this.btnCreateMember.Text = "Create Member";
-            this.btnCreateMember.UseVisualStyleBackColor = true;
+            this.txtLastNameOne.Location = new System.Drawing.Point(124, 85);
+            this.txtLastNameOne.Name = "txtLastNameOne";
+            this.txtLastNameOne.Size = new System.Drawing.Size(225, 35);
+            this.txtLastNameOne.TabIndex = 12;
+            // 
+            // lblLastNameOne
+            // 
+            this.lblLastNameOne.AutoSize = true;
+            this.lblLastNameOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblLastNameOne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.lblLastNameOne.Location = new System.Drawing.Point(6, 90);
+            this.lblLastNameOne.Name = "lblLastNameOne";
+            this.lblLastNameOne.Size = new System.Drawing.Size(117, 30);
+            this.lblLastNameOne.TabIndex = 11;
+            this.lblLastNameOne.Text = "Last Name:";
+            // 
+            // txtFirstNameOne
+            // 
+            this.txtFirstNameOne.Location = new System.Drawing.Point(124, 44);
+            this.txtFirstNameOne.Name = "txtFirstNameOne";
+            this.txtFirstNameOne.Size = new System.Drawing.Size(225, 35);
+            this.txtFirstNameOne.TabIndex = 10;
+            // 
+            // lblFirstNameOne
+            // 
+            this.lblFirstNameOne.AutoSize = true;
+            this.lblFirstNameOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFirstNameOne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.lblFirstNameOne.Location = new System.Drawing.Point(6, 49);
+            this.lblFirstNameOne.Name = "lblFirstNameOne";
+            this.lblFirstNameOne.Size = new System.Drawing.Size(118, 30);
+            this.lblFirstNameOne.TabIndex = 9;
+            this.lblFirstNameOne.Text = "First Name:";
             // 
             // lstTeamMembers
             // 
             this.lstTeamMembers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lstTeamMembers.FormattingEnabled = true;
             this.lstTeamMembers.ItemHeight = 30;
-            this.lstTeamMembers.Location = new System.Drawing.Point(382, 114);
+            this.lstTeamMembers.Location = new System.Drawing.Point(399, 114);
             this.lstTeamMembers.Name = "lstTeamMembers";
             this.lstTeamMembers.Size = new System.Drawing.Size(291, 452);
             this.lstTeamMembers.TabIndex = 21;
@@ -240,7 +241,7 @@
             this.btnDeleteTeam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteTeam.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteTeam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.btnDeleteTeam.Location = new System.Drawing.Point(679, 308);
+            this.btnDeleteTeam.Location = new System.Drawing.Point(696, 308);
             this.btnDeleteTeam.Name = "btnDeleteTeam";
             this.btnDeleteTeam.Size = new System.Drawing.Size(92, 38);
             this.btnDeleteTeam.TabIndex = 22;
