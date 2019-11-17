@@ -63,7 +63,30 @@ namespace TrackerLibrary.Connections.TextHelper
             }
             return output;
         }
+        public static List<Team> ConvertToTeamModels(this List<string> lines, string personFileName)
+        {
+            List<Team> output = new List<Team>();
+            List<Person> people = personFileName.FullFilePath().LoadFile().ConvertToPerson();
 
+
+            foreach (string line in lines)
+            {
+                string[] cols = line.Split(',');
+
+                Team t = new Team();
+                t.Id = int.Parse(cols[0]);                
+                t.TeamName = cols[1];
+
+                string[] personIds = cols[2].Split('|');
+
+                foreach (string id in personIds)
+                {
+                    t.TeamMembers.Add(people.Where(x => x.Id == int.Parse(id)).First());
+                }
+            }
+
+            return output;
+        }
         public static void SaveToPrizeFile( this List<Prize> models, string fileName)
         {
             List<string> lines = new List<string>();
@@ -83,6 +106,32 @@ namespace TrackerLibrary.Connections.TextHelper
                 lines.Add($"{p.Id},{p.FirstName},{p.LastName},{p.EmailAddress},{p.CellphoneNumber}");
             }
             File.WriteAllLines(fileName.FullFilePath(), lines);
+        }
+        public static void SaveToTeamFile(this List<Team> models, string fileName)
+        {
+            List<string> lines = new List<string>();
+
+            foreach (Team t in models)
+            {
+                lines.Add($"{t.Id},{t.TeamName},{ConvertPeopleListToString(t.TeamMembers)}");
+            }
+            File.WriteAllLines(fileName.FullFilePath(), lines);
+        }
+        private static string ConvertPeopleListToString(List<Person> people)
+        {
+            string output = "";
+
+            if (people.Count == 0)
+            {
+                return "";
+            }
+
+            foreach (Person p in people)
+            {
+                output += $"{p.Id}|";
+            }
+            output = output.Substring(0, output.Length - 1);
+            return output;
         }
     }
 }

@@ -10,6 +10,7 @@ namespace TrackerLibrary.Connections
     {
         Prize CreatePrize(Prize model);
         Person CreatePerson(Person model);
+        Team CreateTeam(Team model);
         List<Person> GetPerson_All();
     }
 }
