@@ -19,8 +19,9 @@ namespace TrackerUI
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Initialize the databse connections
-            TrackerLibrary.GlobalConfig.InitializedConnections(DatabaseType.Sql);
-            Application.Run(new frmCreatePrize());
+            TrackerLibrary.GlobalConfig.InitializedConnections(DatabaseType.TextFile);
+            Application.Run(new frmCreateTeam());
+            //Application.Run(new frmCreatePrize());
         }
     }
 }

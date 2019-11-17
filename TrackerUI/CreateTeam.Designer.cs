@@ -46,7 +46,7 @@
             this.txtFirstNameOne = new System.Windows.Forms.TextBox();
             this.lblFirstNameOne = new System.Windows.Forms.Label();
             this.lstTeamMembers = new System.Windows.Forms.ListBox();
-            this.btnDeleteTeam = new System.Windows.Forms.Button();
+            this.btnRemoveTeam = new System.Windows.Forms.Button();
             this.btnCreateTeam = new System.Windows.Forms.Button();
             this.grpAddNewMember.SuspendLayout();
             this.SuspendLayout();
@@ -95,6 +95,7 @@
             this.btnAddTeam.TabIndex = 19;
             this.btnAddTeam.Text = "Add Team";
             this.btnAddTeam.UseVisualStyleBackColor = true;
+            this.btnAddTeam.Click += new System.EventHandler(this.btnAddTeam_Click);
             // 
             // cboSelectTeam
             // 
@@ -233,20 +234,21 @@
             this.lstTeamMembers.Size = new System.Drawing.Size(291, 452);
             this.lstTeamMembers.TabIndex = 21;
             // 
-            // btnDeleteTeam
+            // btnRemoveTeam
             // 
-            this.btnDeleteTeam.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnDeleteTeam.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.btnDeleteTeam.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnDeleteTeam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteTeam.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteTeam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.btnDeleteTeam.Location = new System.Drawing.Point(696, 308);
-            this.btnDeleteTeam.Name = "btnDeleteTeam";
-            this.btnDeleteTeam.Size = new System.Drawing.Size(92, 38);
-            this.btnDeleteTeam.TabIndex = 22;
-            this.btnDeleteTeam.Text = "Delete";
-            this.btnDeleteTeam.UseVisualStyleBackColor = true;
+            this.btnRemoveTeam.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnRemoveTeam.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnRemoveTeam.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnRemoveTeam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveTeam.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveTeam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.btnRemoveTeam.Location = new System.Drawing.Point(696, 308);
+            this.btnRemoveTeam.Name = "btnRemoveTeam";
+            this.btnRemoveTeam.Size = new System.Drawing.Size(106, 38);
+            this.btnRemoveTeam.TabIndex = 22;
+            this.btnRemoveTeam.Text = "Remove";
+            this.btnRemoveTeam.UseVisualStyleBackColor = true;
+            this.btnRemoveTeam.Click += new System.EventHandler(this.btnRemoveTeam_Click);
             // 
             // btnCreateTeam
             // 
@@ -270,7 +272,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 650);
             this.Controls.Add(this.btnCreateTeam);
-            this.Controls.Add(this.btnDeleteTeam);
+            this.Controls.Add(this.btnRemoveTeam);
             this.Controls.Add(this.lstTeamMembers);
             this.Controls.Add(this.grpAddNewMember);
             this.Controls.Add(this.btnAddTeam);
@@ -310,7 +312,7 @@
         private System.Windows.Forms.Label lblFirstNameOne;
         private System.Windows.Forms.Button btnCreateMember;
         private System.Windows.Forms.ListBox lstTeamMembers;
-        private System.Windows.Forms.Button btnDeleteTeam;
+        private System.Windows.Forms.Button btnRemoveTeam;
         private System.Windows.Forms.Button btnCreateTeam;
     }
 }
