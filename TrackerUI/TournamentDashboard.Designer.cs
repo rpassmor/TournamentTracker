@@ -109,9 +109,11 @@
             this.Controls.Add(this.lblLoadTournament);
             this.Controls.Add(this.lblTournamentDashboard);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "frmTournamentDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tournament Dashboard";
             this.ResumeLayout(false);
             this.PerformLayout();

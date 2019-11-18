@@ -76,6 +76,11 @@ namespace TrackerLibrary.Connections
             teams.SaveToTeamFile(TeamFile);
             return model;
         }
+
+        public List<Team> GetTeam_All()
+        {
+            return TeamFile.FullFilePath().LoadFile().ConvertToTeamModels(PersonFile);
+        }
     }
 }
 

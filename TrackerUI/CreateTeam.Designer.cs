@@ -93,7 +93,7 @@
             this.btnAddTeam.Name = "btnAddTeam";
             this.btnAddTeam.Size = new System.Drawing.Size(176, 44);
             this.btnAddTeam.TabIndex = 19;
-            this.btnAddTeam.Text = "Add Team";
+            this.btnAddTeam.Text = "Add Player";
             this.btnAddTeam.UseVisualStyleBackColor = true;
             this.btnAddTeam.Click += new System.EventHandler(this.btnAddTeam_Click);
             // 
@@ -283,9 +283,11 @@
             this.Controls.Add(this.lblTeamName);
             this.Controls.Add(this.lblCreateTeam);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "frmCreateTeam";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Team";
             this.grpAddNewMember.ResumeLayout(false);
             this.grpAddNewMember.PerformLayout();

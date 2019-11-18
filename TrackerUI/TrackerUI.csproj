@@ -83,6 +83,8 @@
     <Compile Include="CreateTournament.Designer.cs">
       <DependentUpon>CreateTournament.cs</DependentUpon>
     </Compile>
+    <Compile Include="IPrizeRequester.cs" />
+    <Compile Include="ITeamRequester.cs" />
     <Compile Include="Prize.cs">
       <SubType>Form</SubType>
     </Compile>
