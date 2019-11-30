@@ -248,6 +248,7 @@
             this.btnCreateTournament.TabIndex = 24;
             this.btnCreateTournament.Text = "Create Tournament";
             this.btnCreateTournament.UseVisualStyleBackColor = true;
+            this.btnCreateTournament.Click += new System.EventHandler(this.btnCreateTournament_Click);
             // 
             // frmCreateTournament
             // 

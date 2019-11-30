@@ -87,6 +87,7 @@
             this.cboRound.Name = "cboRound";
             this.cboRound.Size = new System.Drawing.Size(198, 38);
             this.cboRound.TabIndex = 3;
+            this.cboRound.SelectedIndexChanged += new System.EventHandler(this.cboRound_SelectedIndexChanged);
             // 
             // chkUnplayed
             // 

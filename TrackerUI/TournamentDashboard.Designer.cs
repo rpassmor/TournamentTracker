@@ -81,6 +81,7 @@
             this.btnLoadTournament.TabIndex = 28;
             this.btnLoadTournament.Text = "Load Tournament";
             this.btnLoadTournament.UseVisualStyleBackColor = true;
+            this.btnLoadTournament.Click += new System.EventHandler(this.btnLoadTournament_Click);
             // 
             // btnCreateTournament
             // 
@@ -96,13 +97,14 @@
             this.btnCreateTournament.TabIndex = 29;
             this.btnCreateTournament.Text = "Create Tournament";
             this.btnCreateTournament.UseVisualStyleBackColor = true;
+            this.btnCreateTournament.Click += new System.EventHandler(this.btnCreateTournament_Click);
             // 
             // frmTournamentDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(691, 458);
+            this.ClientSize = new System.Drawing.Size(691, 300);
             this.Controls.Add(this.btnCreateTournament);
             this.Controls.Add(this.btnLoadTournament);
             this.Controls.Add(this.cboLoadTournament);

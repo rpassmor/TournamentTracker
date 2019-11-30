@@ -11,7 +11,9 @@ namespace TrackerLibrary.Connections
         Prize CreatePrize(Prize model);
         Person CreatePerson(Person model);
         Team CreateTeam(Team model);
+        void CreateTournament(Tournament model);
         List<Person> GetPerson_All();
         List<Team> GetTeam_All();
+        List<Tournament> GetTournament_All();
     }
 }
